@@ -32,10 +32,10 @@ const MatchSection = () =>
     };
     return (
         <div className="py-12 px-4 ">
-            <div className="max-w-7xl mx-auto">
+            <div className=" ">
                 <div className=" mb-10 flex justify-center  gap-2">
                     <div className="w-3 h-3 mt-4 bg-[#CBEC5E] "></div>
-                    <h2 className="text-2xl sm:text-3xl capitalize font-bold md:text-4xl  ">
+                    <h2 className="text-2xl sm:text-3xl uppercase font-bold md:text-4xl  ">
                         FIND THE PERFECT M<span className=" relative">ATCH IN SECONDS  <span className="absolute left-0 bottom-[-3px] w-full h-1 bg-[#CBEC5E] rounded-full"></span></span>
 
                     </h2>
@@ -55,9 +55,9 @@ const MatchSection = () =>
                             </p>
                         </div>
                         <div>
-                            <div className="w-full max-w-3xl flex items-center bg-white rounded-full shadow-lg overflow-hidden  ">
-                                <div className="flex items-center justify-center  ">
-                                    <div className="bg-black p-2 rounded-full">
+                            <div className="w-full relative max-w-3xl flex items-center bg-white rounded-full shadow-lg mt-12">
+                                <div className="flex items-center justify-center pl-2">
+                                    <div className="bg-black border-2 border-[#CBEC5E] p-2 rounded-full">
                                         <FaSearch className="w-6 h-6 text-white" />
                                     </div>
                                 </div>
@@ -65,31 +65,36 @@ const MatchSection = () =>
                                 <input
                                     type="text"
                                     placeholder="Find a job, talent or service"
-                                    className="flex-1 p-4 text-black outline-none"
+                                    className="flex-1 z-0 h-[60px] p-4 text-black outline-none"
                                 />
 
-                                <div className="relative">
+                                <div className="relative mr-2">
                                     <button
                                         onClick={() => setIsTalentOpen(!isTalentOpen)}
-                                        className="border border-gray-500 bg-black py-2 px-3 rounded-full flex items-center space-x-2 text-white hover:bg-gray-800"
+                                        className=" border-2 border-gray-400 bg-[#CDCDCD] py-2 px-3 rounded-full flex items-center space-x-2 text-black "
                                     >
-                                        <span>{talents.find((talent) => talent.code === selectedTalent).name}</span>
+                                        <span>{talents.find((talent) => talent.code === selectedTalent)?.name}</span>
                                         <MdKeyboardArrowDown className="text-xl" />
                                     </button>
+
                                     {isTalentOpen && (
-                                        <div className="absolute top-full mt-2 right-0 bg-white border border-gray-500 rounded-lg shadow-lg w-48 z-50">
+                                        <div className="absolute mt-2 bg-white border border-gray-300 rounded-xl shadow-xl w-64 z-50 divide-y divide-gray-200">
                                             {talents.map((talent) => (
                                                 <button
                                                     key={talent.code}
                                                     onClick={() => handleTalentSelect(talent.code)}
-                                                    className="flex items-center space-x-2 px-4 py-2 w-full text-left text-black hover:bg-gray-700 hover:text-white"
+                                                    className="flex items-start space-x-3 px-4 py-3 w-full text-left hover:bg-gray-100 transition-colors duration-200"
                                                 >
-                                                    {talent.icon}
-                                                    <span>{talent.name}</span>
+                                                    <div className="text-xl pt-1">{talent.icon}</div>
+                                                    <div className="flex flex-col text-black">
+                                                        <span className="font-semibold text-sm">{talent.name}</span>
+                                                        <span className="text-xs text-gray-600">{talent.description}</span>
+                                                    </div>
                                                 </button>
                                             ))}
                                         </div>
                                     )}
+
                                 </div>
                             </div>
                             <div className="space-x-6 pt-6">
@@ -151,9 +156,9 @@ const MatchSection = () =>
                                 <div className="w-15 h-15 rounded-full bg-[#CBEC5E]">
 
                                 </div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-black px-4 py-2 rounded-full">
-                                Talent
-                            </h3>
+                                <h3 className="text-xl sm:text-2xl font-bold text-black px-4 py-2 rounded-full">
+                                    Talent
+                                </h3>
                             </div>
                         </div>
                         {/* Bottom Images with Talent Text */}

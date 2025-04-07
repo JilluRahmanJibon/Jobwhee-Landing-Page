@@ -82,10 +82,10 @@ const SuccessfulContracts = () =>
     //গভীর কাট: clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%)"
     return (
         <div className="py-12 px-4 ">
-            <div className="max-w-7xl mx-auto">
+            <div className=" ">
                 <div className=" mb-10 flex justify-center  gap-2">
                     <div className="w-3 h-3 mt-4 bg-[#CBEC5E] "></div>
-                    <h2 className="text-2xl sm:text-3xl capitalize font-bold md:text-4x   ">
+                    <h2 className="text-2xl sm:text-3xl uppercase font-bold md:text-4x   ">
                         SUCCESSFUL <span className=" relative">CONTRACTS  <span className="absolute left-0 bottom-[-3px] w-full h-1 bg-[#CBEC5E] rounded-full"></span></span>
 
                     </h2>
@@ -159,7 +159,7 @@ const SuccessfulContracts = () =>
                                     </div>
                                     <div>
                                         <h1 className="flex font-bold"><RiShoppingBag4Fill className="mt-1 mr-0.5" />Job Details</h1>
-                                        <div className="grid grid-cols-2"> 
+                                        <div className="grid grid-cols-2">
 
                                             <p className="text-sm">
                                                 <span className="font-semibold">Start Date:</span> {contract.jobDetail.startDate}
@@ -167,7 +167,7 @@ const SuccessfulContracts = () =>
                                             <p className="text-sm">
                                                 <span className="font-semibold">Budget:</span> {contract.jobDetail.budget}
                                             </p>
-                                         
+
                                             <p className="text-sm">
                                                 <span className="font-semibold">End Date:</span> {contract.jobDetail.endDate}
                                             </p>

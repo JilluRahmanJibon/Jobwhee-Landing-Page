@@ -23,15 +23,15 @@ export default function Navbar ()
     };
 
     return (
-        <nav className="bg-black max-w-7xl mx-auto rounded-full text-white p-4 stick top-0 z-50">
+        <nav className="bg-black max-h-[74px] rounded-full text-white p-4 stick top-0 z-50">
             <div className="container mx-auto flex justify-between items-center relative">
                 <div className="flex items-center">
                     <Link href="/">
                         <Image
                             src="/logo.png"
                             alt="Logo"
-                            width={100}
-                            height={40}
+                            width={142}
+                            height={26}
                             className="cursor-pointer"
                         />
                     </Link>
@@ -75,31 +75,32 @@ export default function Navbar ()
                                 width={20}
                                 height={20}
                             />
-                            <span>{languages.find((lang) => lang.code === selectedLang).name}</span>
+                            <span className="uppercase" >{languages.find((lang) => lang.code === selectedLang).name.slice(0,2)}</span>
                             <MdKeyboardArrowDown />
                         </button>
                         {isLangOpen && (
-                            <div className="absolute top-full mt-2 right-0 bg-black border border-gray-500 rounded-lg shadow-lg w-30 z-50">
+                            <div className="absolute top-full mt-2 right-0 bg-black rounded-lg shadow-lg w-30 z-50 divide-y divide-gray-600">
                                 {languages.map((lang) => (
                                     <button
                                         key={lang.code}
                                         onClick={() => handleLangSelect(lang.code)}
-                                        className="flex items-center space-x-2 px-4 py-2  text-left hover:bg-gray-700"
+                                        className="flex items-center space-x-2 px-4 py-2 text-left hover:bg-gray-700"
                                     >
                                         <Image src={lang.flag} alt={lang.name} width={20} height={20} />
                                         <span>{lang.name}</span>
                                     </button>
                                 ))}
                             </div>
+
                         )}
                     </div>
 
-                    <Link href="/signin" className="border border-gray-500 bg-black py-2 px-3 rounded-full">
+                    <Link href="/signin" className="border border-gray-500 bg-black py-2 px-3 rounded-[49px]">
                         Sign In
                     </Link>
                     <Link
                         href="/signup"
-                        className="border border-gray-500 bg-white text-black py-2 px-3 rounded-full"
+                        className="border border-gray-500 bg-white text-black py-2 px-3 rounded-[49px]"
                     >
                         Sign Up
                     </Link>

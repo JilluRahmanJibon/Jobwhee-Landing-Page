@@ -33,15 +33,15 @@ const Discover = () =>
 
     return (
         <div className="py-12 px-4">
-            <div className="max-w-7xl mx-auto text-center">
+            <div className="  text-center">
                 {/* Discover More with Underline */}
                 <div className=" mb-10 flex justify-center  gap-2">
                     <div className="w-3 h-3 mt-4 bg-[#CBEC5E] "></div>
-                    <h2 className="text-2xl sm:text-3xl capitalize font-bold md:text-4xl  ">
+                    <h2 className="text-2xl sm:text-3xl uppercase font-bold md:text-4xl  ">
                         DISC<span className=" relative">OVER  <span className="absolute left-0 bottom-[-3px] w-full h-1 bg-[#CBEC5E] rounded-full"></span></span>
 
                     </h2>
-              </div>
+                </div>
 
                 {/* Discover Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4  ">
