@@ -7,3 +7,8 @@ html {
 .PoppinsFont {
   font-family: var(--font-poppins);
 }
+
+.bottomScrollbar::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
