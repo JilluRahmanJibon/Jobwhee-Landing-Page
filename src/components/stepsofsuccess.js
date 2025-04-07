@@ -23,16 +23,18 @@ function stepsofsuccess ()
           </div>
         </div>
         <div className="w-[297px] h-[56px] mt-[3rem] mb-[1.5rem] flex items-center bg-white rounded-[30px]">
-          <button className="w-[50%] h-full text-[18px] font-[500] text-[#18470D] bg-[#ffffff] rounded-[30px]">
+          <button className="w-[50%] h-full cursor-pointer text-[18px] font-[500] text-[#18470D] bg-[#ffffff] rounded-[30px]">
             Client
           </button>
-          <button className="w-[50%] h-full text-[18px] font-[500] text-[#18470D] bg-[#CBEC5E] border-[3px] border-[#ffffff] rounded-[30px]">
+          <button className="w-[50%] h-full cursor-pointer text-[18px] font-[500] text-[#18470D] bg-[#CBEC5E] border-[3px] border-[#ffffff] rounded-[30px]">
             Talent
           </button>
         </div>
         <div className="w-[275px] h-[384px] rounded-[30px] bg-white relative">
           {/* <div className="absolute left-[1rem] top-[1rem] w-[50px] h-[50px] rounded-[13px] bg-[#000]" style={{"clip-path": "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"}}></div> */}
+          
           <div className="">
+            <h1>under construction</h1>
             <Image
               fill
               src="/stepofsuccess/1.png"

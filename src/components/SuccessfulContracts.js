@@ -36,13 +36,13 @@ const SuccessfulContracts = () =>
                 name: "Emily Johnson",
                 picture: "/images/d-3.png",
                 review: "4.4",
-                bio: "Marketing expert specializing in digital campaigns.",
+                bio: "Founder of MathTech",
             },
             talent: {
                 name: "Mike Brown",
                 picture: "/images/d-2.png",
                 review: "4.9",
-                bio: "Web developer proficient in React and Node.js.",
+                bio: "Math Teacher",
             },
             title: "Developed a responsive e-commerce website.",
             paymentType: "fixed price",
@@ -59,13 +59,13 @@ const SuccessfulContracts = () =>
                 name: "Alex Carter",
                 picture: "/images/d-2.png",
                 review: "5",
-                bio: "Educator seeking quality tutoring services.",
+                bio: "Founder of MathTech",
             },
             talent: {
                 name: "Lisa White",
                 picture: "/images/d-3.png",
                 review: "4.5",
-                bio: "Educator seeking",
+                bio: "Math Teacher",
             },
             title: "Provided math tutoring for high school students.",
             paymentType: "fixed price",
@@ -79,7 +79,7 @@ const SuccessfulContracts = () =>
 
         },
     ];
-    //গভীর কাট: clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 30%)"
+
     return (
         <div className="py-12 px-4 ">
             <div className=" ">
@@ -102,7 +102,7 @@ const SuccessfulContracts = () =>
                                 <div className="flex justify-between gap-5">
                                     <h1 className="font-bold text-2xl">CONTRACT</h1>
                                     <div className="">
-                                        <h1 className="font-bold">{contract.title}</h1>
+                                        <h1 className="font-bold text-[16px]">{contract.title}</h1>
                                         <p ><span className="font-bold">Payment Type:</span> {contract.paymentType}  </p>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@ const SuccessfulContracts = () =>
                                                 alt={contract.client.name}
                                                 width={40}
                                                 height={40}
-                                                className="rounded-full object-cover"
+                                                className="rounded-full w-[47px] h-[47px] object-cover"
                                             />
                                             <div>
                                                 <p className="bg-gray-300 px-4 py-1 rounded-full">Talent</p>
@@ -136,7 +136,7 @@ const SuccessfulContracts = () =>
                                                 alt={contract.talent.name}
                                                 width={40}
                                                 height={40}
-                                                className="rounded-full object-cover"
+                                                className="rounded-full w-[47px] h-[47px]  object-cover"
                                             />
                                             <div>
                                                 <p className="bg-[#CBEC5E] px-4 py-1 rounded-full">Talent</p>
