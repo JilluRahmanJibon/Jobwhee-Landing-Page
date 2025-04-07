@@ -5,6 +5,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineDescription } from "react-icons/md";
 import { RiShoppingBag4Fill } from "react-icons/ri";
+
 const SuccessfulContracts = () =>
 {
     const contracts = [
@@ -29,7 +30,7 @@ const SuccessfulContracts = () =>
                 endDate: "2025-04-20",
                 status: "Completed",
                 budget: "800",
-            }
+            },
         },
         {
             client: {
@@ -52,7 +53,7 @@ const SuccessfulContracts = () =>
                 endDate: "2025-04-20",
                 status: "Completed",
                 budget: "800",
-            }
+            },
         },
         {
             client: {
@@ -75,41 +76,45 @@ const SuccessfulContracts = () =>
                 endDate: "2025-04-20",
                 status: "Completed",
                 budget: "800",
-            }
-
+            },
         },
     ];
 
     return (
-        <div className="py-12 px-4 ">
-            <div className=" ">
-                <div className=" mb-10 flex justify-center  gap-2">
-                    <div className="w-3 h-3 mt-4 bg-[#CBEC5E] "></div>
-                    <h2 className="text-2xl sm:text-3xl uppercase font-bold md:text-4x   ">
-                        SUCCESSFUL <span className=" relative">CONTRACTS  <span className="absolute left-0 bottom-[-3px] w-full h-1 bg-[#CBEC5E] rounded-full"></span></span>
-
+        <div className="py-12 px-4">
+            <div>
+                <div className="mb-10 flex justify-center gap-2">
+                    <div className="w-3 h-3 mt-4 bg-[#CBEC5E]"></div>
+                    <h2 className="text-2xl sm:text-3xl uppercase font-bold md:text-4xl">
+                        SUCCESSFUL <span className="relative">CONTRACTS <span className="absolute left-0 bottom-[-3px] w-full h-1 bg-[#CBEC5E] rounded-full"></span></span>
                     </h2>
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cold-1 pnggrid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {contracts.map((contract, index) => (
-                        <div key={index}>
+                        <div key={index} className="relative">
+                            {/* Background Layer with ClipPath */}
                             <div
+                                className="absolute rounded-tl-[100px] inset-0 rounded-4xl bg-white"
+                                style={{
+                                    clipPath: "polygon(0% 13%, 36% 13%, 48% 0%,  100% 0%,   100% 100%,  0% 100%, 0% 85%)", 
+                                }}
+                            ></div>
 
-                                className="bg-white rounded-4xl  p-6 flex flex-col space-y-4"
-                            >
+                            {/* Content Layer */}
+                            <div className="relative z-10 p-6 flex flex-col space-y-4">
                                 <div className="flex justify-between gap-5">
                                     <h1 className="font-bold text-2xl">CONTRACT</h1>
-                                    <div className="">
+                                    <div>
                                         <h1 className="font-bold text-[16px]">{contract.title}</h1>
-                                        <p ><span className="font-bold">Payment Type:</span> {contract.paymentType}  </p>
+                                        <p><span className="font-bold">Payment Type:</span> {contract.paymentType}</p>
                                     </div>
                                 </div>
                                 <div className="flex gap-3 justify-between">
                                     {/* Client Section */}
-                                    <div className=" w-full  bg-gray-100 p-3 rounded-3xl">
-                                        <div className="flex  gap-4 justify-between">
+                                    <div className="w-full bg-gray-100 p-3 rounded-3xl">
+                                        <div className="flex gap-4 justify-between">
                                             <Image
                                                 src={contract.client.picture}
                                                 alt={contract.client.name}
@@ -118,25 +123,25 @@ const SuccessfulContracts = () =>
                                                 className="rounded-full w-[47px] h-[47px] object-cover"
                                             />
                                             <div>
-                                                <p className="bg-gray-300 px-4 py-1 rounded-full">Talent</p>
+                                                <p className="bg-gray-300 px-4 py-1 rounded-full">Client</p>
                                                 <p className="flex gap-1"><FaStar className="mt-1 text-amber-300" /> {contract.client.review}</p>
                                             </div>
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-semibold">{contract.client.name} </h3>
+                                            <h3 className="text-lg font-semibold">{contract.client.name}</h3>
                                             <p className="text-sm text-gray-600">{contract.client.bio}</p>
                                         </div>
                                     </div>
 
                                     {/* Talent Section */}
-                                    <div className="w-full  bg-gray-100 p-3 rounded-3xl">
-                                        <div className="flex  gap-4 justify-between">
+                                    <div className="w-full bg-gray-100 p-3 rounded-3xl">
+                                        <div className="flex gap-4 justify-between">
                                             <Image
                                                 src={contract.talent.picture}
                                                 alt={contract.talent.name}
                                                 width={40}
                                                 height={40}
-                                                className="rounded-full w-[47px] h-[47px]  object-cover"
+                                                className="rounded-full w-[47px] h-[47px] object-cover"
                                             />
                                             <div>
                                                 <p className="bg-[#CBEC5E] px-4 py-1 rounded-full">Talent</p>
@@ -144,7 +149,7 @@ const SuccessfulContracts = () =>
                                             </div>
                                         </div>
                                         <div>
-                                            <h3 className="text-lg font-semibold">{contract.talent.name} </h3>
+                                            <h3 className="text-lg font-semibold">{contract.talent.name}</h3>
                                             <p className="text-sm text-gray-600">{contract.talent.bio}</p>
                                         </div>
                                     </div>
@@ -154,39 +159,35 @@ const SuccessfulContracts = () =>
                                 <div className="space-y-2">
                                     <div>
                                         <h1 className="flex font-bold"><MdOutlineDescription className="mt-1 mr-0.5" />Description</h1>
-
                                         <p>{contract.description}</p>
                                     </div>
                                     <div>
                                         <h1 className="flex font-bold"><RiShoppingBag4Fill className="mt-1 mr-0.5" />Job Details</h1>
                                         <div className="grid grid-cols-2">
-
                                             <p className="text-sm">
                                                 <span className="font-semibold">Start Date:</span> {contract.jobDetail.startDate}
                                             </p>
                                             <p className="text-sm">
                                                 <span className="font-semibold">Budget:</span> {contract.jobDetail.budget}
                                             </p>
-
                                             <p className="text-sm">
                                                 <span className="font-semibold">End Date:</span> {contract.jobDetail.endDate}
                                             </p>
                                             <p className="text-sm">
                                                 <span className="font-semibold">Status:</span>{" "}
                                                 <span
-                                                    className={`${ contract.jobDetail.status === "Completed" ? "text-green-600" : "text-yellow-600"
-                                                        } font-semibold`}
+                                                    className={`${ contract.jobDetail.status === "Completed" ? "text-green-600" : "text-yellow-600" } font-semibold`}
                                                 >
                                                     {contract.jobDetail.status}
                                                 </span>
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div>
-                                    <h1 className="text-center bg-black rounded-2xl text-white py-1 px-3">Fixed-priced contract is under the protection of the
-                                        payment system.</h1>
+                                    <h1 className="text-center bg-black rounded-2xl text-white py-1 px-3">
+                                        Fixed-priced contract is under the protection of the payment system.
+                                    </h1>
                                 </div>
                             </div>
                         </div>

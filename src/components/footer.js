@@ -7,18 +7,22 @@ import logo from '../../public/logo2.png'
 
 const footer = () => {
   return (
-    <div>
-      <footer
-        className={`w-full h-[100%] [@media(min-width:500px)]:pb-[3rem] pb-[46px] mt-[10rem] bg-[#F0F1F4] flex justify-center`}
+    <footer>
+      <div className="  left-0 [@media(min-width:1450px)]:!top-[-110px] [@media(min-width:1135px)]:top-[0px] top-[-140px] w-full flex justify-center text-center">
+        <p className="[@media(min-width:1450px)]:!text-[30px] [@media(min-width:1135px)]:text-[25px] text-[17px] font-[500] text-[#18470D]">
+          Subscribe now
+          <br />
+          and be the first to know!
+        </p>
+      </div>
+      <div
+        className={`w-full h-[100%] [@media(min-width:500px)]:pb-[3rem] pb-[46px]  bg-[#F0F1F4] flex justify-center`}
+        style={{
+          clipPath: "polygon(50.00% 6.00%,78.00% 1.00%,100% 0%,100% 70%,100% 100%,1% 100%,0.00% 29.00%,0% 0%,1% 0%,28.00% 1.00%)",
+        }}
       >
         <div className="[@media(min-width:1450px)]:!w-[1440px] [@media(min-width:1210px)]:w-[1200px] w-[95%]  [@media(min-width:1050px)]:!px-[5.5rem] [@media(min-width:885px)]:px-[3.5rem] px-[15px] mx-auto bg-white [@media(min-width:885px)]:rounded-[50px] [@media(min-width:440px)]:rounded-[40px] rounded-[30px] relative">
-          <div className="absolute left-0 [@media(min-width:1450px)]:!top-[-110px] [@media(min-width:1135px)]:top-[-90px] top-[-140px] w-full flex justify-center text-center">
-            <p className="[@media(min-width:1450px)]:!text-[30px] [@media(min-width:1135px)]:text-[25px] text-[17px] font-[500] text-[#18470D]">
-              Subscribe now
-              <br />
-              and be the first to know!
-            </p>
-          </div>
+         
           <div className="[@media(min-width:1135px)]:relative absolute left-0 [@media(min-width:1135px)]:top-0 top-[-4.8rem] w-full [@media(min-width:1135px)]:pt-[3rem] pt-0 flex flex-col items-center justify-center">
             <div className="w-full flex [@media(min-width:1135px)]:flex-row flex-col justify-center">
               <label className="[@media(min-width:600px)]:w-auto w-[90%]  relative [@media(min-width:1135px)]:mx-0 mx-auto">
@@ -221,9 +225,9 @@ const footer = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </div>
       <div className="w-full h-[14px] bg-[#C0D724]"></div>
-    </div>
+    </footer>
   );
 };
 
