@@ -9,12 +9,14 @@ import MatchSection from "@/components/MatchSection";
 
 export default function Home() {
   return (
-    <div className="space-y-4 max-w-[1440px] mx-auto">
+    <div className="space-y-4">
+      <div className=" max-w-[1440px] mx-auto">
       <Navbar />
       <Banner />
       <Discover />    
       <SuccessfulContracts />
       <MatchSection />
+      </div>
       <StepsOfSuccess />
       <Footer />
     </div>
