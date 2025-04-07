@@ -24,7 +24,7 @@ const SuccessfulContracts = () =>
             },
             title: "Looking for Math Teacher",
             paymentType: "fixed price",
-            description: "Logo design, business cards, and website graphics.",
+            description: "We are looking for a teacher to provide one-on-one algebra and geometry tutoring, 60-minute sessions, twice weekly.",
             jobDetail: {
                 startDate: "2025-03-01",
                 endDate: "2025-04-20",
@@ -45,9 +45,9 @@ const SuccessfulContracts = () =>
                 review: "4.9",
                 bio: "Math Teacher",
             },
-            title: "Developed a responsive e-commerce website.",
+            title: "Looking for Math Teacher",
             paymentType: "fixed price",
-            description: "Frontend development, payment integration.",
+            description: "We are looking for a teacher to provide one-on-one algebra and geometry tutoring, 60-minute sessions, twice weekly.",
             jobDetail: {
                 startDate: "2025-03-01",
                 endDate: "2025-04-20",
@@ -68,9 +68,9 @@ const SuccessfulContracts = () =>
                 review: "4.5",
                 bio: "Math Teacher",
             },
-            title: "Provided math tutoring for high school students.",
+            title: "Looking for Math Teacher",
             paymentType: "fixed price",
-            description: "Weekly sessions, exam preparation.",
+            description: "We are looking for a teacher to provide one-on-one algebra and geometry tutoring, 60-minute sessions, twice weekly.",
             jobDetail: {
                 startDate: "2025-03-01",
                 endDate: "2025-04-20",
@@ -96,9 +96,9 @@ const SuccessfulContracts = () =>
                         <div key={index} className="relative">
                             {/* Background Layer with ClipPath */}
                             <div
-                                className="absolute rounded-tl-[100px] inset-0 rounded-4xl bg-white"
+                                className="absolute  inset-0 rounded-4xl bg-white"
                                 style={{
-                                    clipPath: "polygon(0% 13%, 36% 13%, 48% 0%,  100% 0%,   100% 100%,  0% 100%, 0% 85%)", 
+                                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 54% 0, 49% 1%, 38% 14%, 3% 14%, 0 18%)",
                                 }}
                             ></div>
 
