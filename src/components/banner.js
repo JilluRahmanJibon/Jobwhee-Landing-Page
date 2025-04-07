@@ -8,8 +8,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 export default function Banner ()
 {
-    const [ isTalentOpen, setIsTalentOpen ] = useState(false);  
-    const [ selectedTalent, setSelectedTalent ] = useState("talent"); 
+    const [ isTalentOpen, setIsTalentOpen ] = useState(false);
+    const [ selectedTalent, setSelectedTalent ] = useState("talent");
 
     const talents = [
         {
@@ -28,8 +28,8 @@ export default function Banner ()
 
     const handleTalentSelect = (code) =>
     {
-        setSelectedTalent(code); 
-        setIsTalentOpen(false);  
+        setSelectedTalent(code);
+        setIsTalentOpen(false);
     };
 
     return (
@@ -39,11 +39,11 @@ export default function Banner ()
                 alt="Banner Background"
                 layout="fill"
                 objectFit="cover"
-                className="z-0 rounded-[50px]"
+                className="z-0 rounded-4xl"
+                style={{ clipPath: "polygon( 0 0, 100% 0, 100% 100%, 75% 98%, 60% 95%, 70% 100%, 50% 90%, 35% 98%, 0 100% )" }}
             />
 
             <div className="relative z-10 flex flex-col items-center justify-between py-8 px-4">
-                {/* উপরের দুটি কলাম */}
                 <div className="flex flex-col md:flex-row justify-between w-full max-w-7xl gap-4">
                     <div
                         className="bg-[rgba(95,92,92,0.4)] backdrop-blur-md p-6 rounded-lg text-white"
@@ -77,29 +77,25 @@ export default function Banner ()
                     </div>
                 </div>
 
-                {/* নিচের সার্চ বক্স */}
                 <div className="w-full max-w-3xl flex items-center bg-white rounded-full shadow-lg overflow-hidden mt-12">
-                    {/* সার্চ আইকন */}
                     <div className="flex items-center justify-center pl-4">
                         <div className="bg-black p-2 rounded-full">
                             <FaSearch className="w-6 h-6 text-white" />
                         </div>
                     </div>
 
-                    {/* সার্চ ইনপুট */}
                     <input
                         type="text"
                         placeholder="Find a job, talent or service"
                         className="flex-1 p-4 text-black outline-none"
                     />
 
-                    {/* Talent ড্রপডাউন */}
                     <div className="relative">
                         <button
-                            onClick={() => setIsTalentOpen(!isTalentOpen)} 
+                            onClick={() => setIsTalentOpen(!isTalentOpen)}
                             className="border border-gray-500 bg-black py-2 px-3 rounded-full flex items-center space-x-2 text-white hover:bg-gray-800"
                         >
-                            <span>{talents.find((talent) => talent.code === selectedTalent).name}</span>
+                            <span>{talents.find((talent) => talent.code === selectedTalent)?.name}</span>
                             <MdKeyboardArrowDown className="text-xl" />
                         </button>
                         {isTalentOpen && (
@@ -119,7 +115,6 @@ export default function Banner ()
                     </div>
                 </div>
 
-                {/* Education and Tutoring */}
                 <div className="pt-5">
                     <h1 className="bg-white text-2xl md:text-4xl font-bold rounded-full px-4 py-1 text-center">
                         Education and Tutoring
