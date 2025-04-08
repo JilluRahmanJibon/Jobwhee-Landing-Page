@@ -47,7 +47,7 @@ export default function Banner() {
   return (
     <div className="">
       <div
-        className="relative mt-[20px] [@media(min-width:1450px)]:!w-[1440px] [@media(min-width:1210px)]:!w-[1200px] [@media(min-width:810px)]:w-[780px] w-[90%] [@media(min-width:1450px)]:!h-[715px] [@media(min-width:1210px)]:!h-[594px] [@media(min-width:810px)]:!h-[398px] [@media(min-width:450px)]:h-[400px] h-[285px] [@media(min-width:1210px)]:px-[35px] px-[25px] [@media(min-width:1210px)]:pt-[35px] pt-[25px] [@media(min-width:1210px)]:pb-6 pb-[5px]
+        className="relative mt-[20px] [@media(min-width:1450px)]:!w-[1440px] [@media(min-width:1210px)]:!w-[1200px] [@media(min-width:810px)]:w-[780px] w-[90%] [@media(min-width:1450px)]:!h-[715px] [@media(min-width:1210px)]:!h-[594px] [@media(min-width:810px)]:h-[398px] [@media(min-width:450px)]:h-[400px] h-[285px] [@media(min-width:1210px)]:px-[35px] px-[25px] [@media(min-width:1210px)]:pt-[35px] pt-[25px] [@media(min-width:1210px)]:pb-6 pb-[5px]
          flex flex-col justify-between mx-auto"
       >
         <Image
