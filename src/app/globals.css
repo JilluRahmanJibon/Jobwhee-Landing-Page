@@ -13,6 +13,25 @@ html {
   scrollbar-width: none;
 }
 
+/* Banner Background Image */
+#bannerBackgroundClipPath {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    80% 100%,
+    50% 90%,
+    50% 100%,
+    50% 90%,
+    20% 100%,
+    0 100%
+  );
+}
+@media only screen and (max-width: 450px) {
+  #bannerBackgroundClipPath {
+    clip-path: none;
+  }
+}
 .clip-path-footer {
   clip-path: polygon(
     50% 6%,
