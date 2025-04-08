@@ -1,22 +1,25 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+// Load Google Font
 const poppins = Poppins({
-  subsets: [ 'latin' ],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: [ '100', '200', '300', '400', '500', '600', '700', '800', '900' ]
+  subsets: [ "latin" ],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900"
+  ]
 });
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+// You can add more fonts if needed like Geist or Geist Mono
 
 export const metadata = {
   title: "Test for Jobwhee - Figma",
@@ -26,8 +29,10 @@ export const metadata = {
 export default function RootLayout ({ children })
 {
   return (
-    <html className={``} lang="en">
-      <body className={`${poppins.variable} PoppinsFont antialiased`}>{children}</body>
+    <html data-arp="" lang="en">
+      <body className={`${ poppins.variable } PoppinsFont antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

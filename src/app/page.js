@@ -15,10 +15,10 @@ export default function Home() {
   return (
     <div className="space-y-4">
       <div className=" max-w-[1440px] mx-auto">
-      <Navbar />
-      <Banner />
-      <Discover />    
-      <SuccessfulContracts />
+      {/* <Navbar /> */}
+      {/* <Banner /> */}
+      {/* <Discover />     */}
+      {/* <SuccessfulContracts /> */}
       <MatchSection />
       </div>
       <StepsOfSuccess />
