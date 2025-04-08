@@ -5,6 +5,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineDescription } from "react-icons/md";
 import { RiShoppingBag4Fill } from "react-icons/ri";
+import { useState, useEffect } from "react";
 
 const SuccessfulContracts = () =>
 {
@@ -80,6 +81,37 @@ const SuccessfulContracts = () =>
         },
     ];
 
+    const [ visibleContracts, setVisibleContracts ] = useState([]);
+
+    useEffect(() =>
+    {
+        const updateVisibleContracts = () =>
+        {
+            if (window.innerWidth < 640)
+            {
+                // Mobile: Show 1 card
+                setVisibleContracts(contracts.slice(0, 1));
+            } else if (window.innerWidth >= 640 && window.innerWidth < 1024)
+            {
+                // Small devices: Show 2 cards
+                setVisibleContracts(contracts.slice(0, 2));
+            } else
+            {
+                // Large devices: Show all 3 cards
+                setVisibleContracts(contracts);
+            }
+        };
+
+        // Run on mount
+        updateVisibleContracts();
+
+        // Add resize listener
+        window.addEventListener("resize", updateVisibleContracts);
+
+        // Cleanup listener on unmount
+        return () => window.removeEventListener("resize", updateVisibleContracts);
+    }, []);
+
     return (
         <div className="py-12 px-4">
             <div>
@@ -91,12 +123,12 @@ const SuccessfulContracts = () =>
                 </div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {contracts.map((contract, index) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {visibleContracts.map((contract, index) => (
                         <div key={index} className="relative">
                             {/* Background Layer with ClipPath */}
                             <div
-                                className="absolute  inset-0 rounded-4xl bg-white"
+                                className="absolute inset-0 rounded-4xl bg-white"
                                 style={{
                                     clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 54% 0, 49% 1%, 38% 14%, 3% 14%, 0 18%)",
                                 }}

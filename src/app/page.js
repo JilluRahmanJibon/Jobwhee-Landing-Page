@@ -18,7 +18,7 @@ export default function Home() {
       {/* <Navbar /> */}
       {/* <Banner /> */}
       {/* <Discover />     */}
-      {/* <SuccessfulContracts /> */}
+      <SuccessfulContracts />
       <MatchSection />
       </div>
       <StepsOfSuccess />
