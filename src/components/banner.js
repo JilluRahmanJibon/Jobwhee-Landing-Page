@@ -34,7 +34,7 @@ export default function Banner ()
     };
 
     return (
-        <div className="relative mt-6 lg:min-h-[715px] lg:px-6 px-4 pt-8 pb-6
+        <div className="relative mt-[20px] lg:min-h-[715px] lg:px-6 px-4 pt-8 pb-6
          flex flex-col justify-between">
             <Image
                 src="/banner.png"
