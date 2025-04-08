@@ -12,3 +12,23 @@ html {
   display: none;
   scrollbar-width: none;
 }
+
+.clip-path-footer {
+  clip-path: polygon(
+    50% 6%,
+    78% 1%,
+    100% 0%,
+    100% 70%,
+    100% 100%,
+    1% 100%,
+    0% 29%,
+    0% 0%,
+    1% 0%,
+    28% 1%
+  );
+}
+@media only screen and (max-width: 1210px) {
+  .clip-path-footer {
+    clip-path: none !important;
+  }
+}

@@ -35,10 +35,11 @@ const MatchSection = () =>
     return (
             <div className="py-8 px-4 ">
                 <div className="">
-                    {/* Title Section */}
+                {/* Title Section */}
+                
                     <div className="mb-8 flex justify-center items-center gap-2 pb-6">
                         <div className="w-3 h-3 mt-2 bg-[#CBEC5E]"></div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl uppercase font-bold">
+                        <h2 className="text-2xl text-center sm:text-3xl md:text-4xl uppercase font-bold">
                             Find the Perfect M
                             <span className="relative">
                                 atch in Seconds
@@ -48,17 +49,17 @@ const MatchSection = () =>
                     </div>
 
                     {/* Main Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="flex xl:flex-row flex-col  gap-6">
                         {/* Left Column */}
                         <div className="flex flex-col justify-between space-y-6">
                             <div>
-                            <h2 className="text-[50px] leading-[68px] text-[#18470D] font-semibold mb-2">
-                                    Whether you’re a talent <br />
-                                    or a client, start your <br />
+                            <h2 className="md:text-[50px] sm:text-[28px] text-[20px] md:leading-[68px] text-[#18470D] font-semibold mb-2">
+                                    Whether you’re a talent <br className="hidden md:block"/>
+                                or a client, start your <br className="hidden md:block" />
                                     journey now.
                                 </h2>
-                                <p className="text-[24px] leading-[38px] text-gray-600">
-                                    Easily find the right talent or opportunity. <br /> Start your journey with just a click.
+                                <p className="md:text-[24px] sm:text-[16px] md:leading-[38px] text-gray-600">
+                                Easily find the right talent or opportunity. <br className="hidden md:block" /> Start your journey with just a click.
                                 </p>
                             </div>
 
@@ -130,25 +131,25 @@ const MatchSection = () =>
                         </div>
 
                         {/* Right Column */}
-                    <div className="relative flex flex-col space-y-10 max-w-[594px] ">
+                    <div className="relative flex flex-col space-y-10 max-w-[594px] mx-auto ">
                             {/* Top Images */}
                             <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-[#B4D7F0] w-[291px] h-[319px] rounded-2xl overflow-hidden">
+                                <div className="bg-[#B4D7F0] sm:w-[291px] sm:h-[319px] rounded-2xl overflow-hidden">
                                     <Image
                                         src="/images/m1.png"
                                         alt="Match Image 1"
                                         width={200}
                                         height={200}
-                                        className="object-cover w-full  "
+                                        className="object-cover w-full h-full "
                                     />
                                 </div>
-                                <div className="bg-[#B9AEDB] w-[291px] h-[319px] rounded-2xl overflow-hidden">
+                                <div className="bg-[#B9AEDB] sm:w-[291px] sm:h-[319px] rounded-2xl overflow-hidden">
                                     <Image
                                         src="/images/m2.png"
                                         alt="Match Image 2"
                                         width={200}
                                         height={200}
-                                        className="object-cover w-full  "
+                                        className="object-cover w-full h-full "
                                     />
                                 </div>
                             </div>
@@ -165,20 +166,20 @@ const MatchSection = () =>
 
 
                             {/* Bottom Images */}
-                            <div className="bg-[#99B185] overflow-hidden rounded-2xl w-[594px] h-[245px] p-2 grid grid-cols-2 gap-4">
+                            <div className="bg-[#99B185] overflow-hidden rounded-2xl sm:w-[594px] sm:h-[245px]  grid grid-cols-2 gap-4">
                                 <Image
                                     src="/images/m3.png"
                                     alt="Match Image 3"
                                     width={150}
                                     height={150}
-                                    className="rounded-lg w-full"
+                                    className="rounded-lg w-full h-full"
                                 />
                                 <Image
                                     src="/images/m4.png"
                                     alt="Match Image 4"
                                     width={150}
                                     height={150}
-                                    className="rounded-lg w-full"
+                                    className="rounded-lg w-full h-full"
                                 />
                             </div>
                         </div>
