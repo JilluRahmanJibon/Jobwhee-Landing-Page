@@ -30,8 +30,8 @@ export default function Navbar() {
 
   return (
     <nav className="w-full  text-white mt-[1.5rem] stick top-0 z-50 [@media(min-width:850px)]:px-0 px-[1rem]">
-      <div className="[@media(min-width:1450px)]:!w-[1440px] [@media(min-width:1210px)]:!w-[1200px] [@media(min-width:850px)]:w-[850px] [@media(min-width:540px)]:w-[95%] w-[100%] [@media(min-width:1450px)]:!h-[74px] [@media(min-width:1210px)]:!h-[62px] [@media(min-width:500px)]:h-[54px]  h-[44px] mx-auto rounded-full flex justify-between bg-black items-center relative [@media(min-width:1210px)]:!px-[15px] [@media(min-width:850px)]:px-[8px] px-[5px]">
-        <div className="flex items-center [@media(min-width:1450px)]:!ml-[1rem]  [@media(min-width:850px)]:ml-[0.8rem] ml-[0.5rem]">
+      <div className="[@media(min-width:1450px)]:!w-[1440px] [@media(min-width:1210px)]:!w-[1200px] [@media(min-width:850px)]:w-[780px] [@media(min-width:540px)]:w-[95%] w-[100%] [@media(min-width:1450px)]:!h-[74px] [@media(min-width:1210px)]:!h-[62px] [@media(min-width:500px)]:h-[54px]  h-[49px] mx-auto rounded-full flex justify-between bg-black items-center relative [@media(min-width:1210px)]:!px-[15px] [@media(min-width:850px)]:px-[8px] px-[5px]">
+        <div className="flex items-center [@media(min-width:1450px)]:!ml-[1rem]  [@media(min-width:850px)]:!ml-[0.8rem] [@media(min-width:450px)]:ml-[0.5rem] ml-[1rem]">
           <Link href="/">
             <Image
               src="/logo.png"
