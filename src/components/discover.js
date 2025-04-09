@@ -47,7 +47,7 @@ const Discover = () => {
         </div>
 
         {/* Discover Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4  ">
+        <div className="w-full flex items-center justify-between max-h-full overflow-x-auto [@media(min-width:1210px)]:gap-[15px] gap-0 bottomScrollbar">
           {discovers.map((dis, i) => (
             <div key={i} className="overflow-hidden">
               <Image
