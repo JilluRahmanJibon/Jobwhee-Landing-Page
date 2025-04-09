@@ -64,7 +64,7 @@ const MatchSection = () =>
                             </div>
 
                             {/* Search Bar */}
-                            <div className="relative flex items-center bg-white rounded-full shadow-lg max-w-lg">
+                            <div className="relative flex items-center bg-white rounded-full shadow-lg sm:max-w-lg">
                                 <div className="flex items-center pl-2">
                                     <div className="bg-black border-2 border-[#CBEC5E] p-2 rounded-full">
                                         <FaSearch className="w-5 h-5 text-white" />
